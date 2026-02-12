@@ -1,191 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intel — Sustainability Through the Ages</title>
+
+  <!-- Bootstrap (default LTR) -->
+  <link id="bootstrap-css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons (for small icons if needed) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
+  <!-- language toggle button (visible) -->
+  <button id="langToggleBtn" class="btn btn-sm btn-outline-secondary position-fixed top-0 end-0 m-3"
+          aria-pressed="false" aria-label="Switch language">
+    English
+  </button>
+
+  <!-- HERO -->
+  <header class="hero-section text-center text-white py-5">
+    <div class="container">
+      <img src="img/intel-header-logo.svg" alt="Intel logo" width="120" class="mb-3">
+
+      <h1 data-en="Sustainability Through the Ages" data-ar="الاستدامة عبر العصور">
         Sustainability Through the Ages
       </h1>
 
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
+      <p class="lead" data-en="Explore Intel's journey through time and discover how innovation has shaped a more sustainable future."
+         data-ar="استكشف رحلة إنتل عبر الزمن وكيف شكّل الابتكار مستقبلاً أكثر استدامة.">
+        Explore Intel's journey through time and discover how innovation has shaped a more sustainable future.
       </p>
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
+  <!-- TIMELINE (4 cards) -->
+  <section class="container py-5">
+    <div class="row g-4 justify-content-center">
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
+      <!-- 1968 -->
+      <article class="col-12 col-sm-6 col-md-3">
+        <div class="card timeline-card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="fw-bold" data-en="1968" data-ar="1968">1968</h3>
+            <p data-en="Intel Founded" data-ar="تأسست شركة إنتل">Intel Founded</p>
+          </div>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+          <div class="img-wrap">
+            <img src="img/1.jpg" class="card-img-bottom" alt="Intel founded historic photo">
+            <div class="img-overlay" tabindex="0"
+                 data-en="Robert Noyce and Gordon Moore established Intel in 1968."
+                 data-ar="روبرت نويس وجوردون مور يؤسسان إنتل في عام 1968.">
+              Robert Noyce and Gordon Moore established Intel in 1968.
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+      <!-- 1971 (middle highlighted content uses overlay text in blue box when not showing image) -->
+      <article class="col-12 col-sm-6 col-md-3">
+        <div class="card timeline-card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="fw-bold" data-en="1971" data-ar="1971">1971</h3>
+            <p data-en="Intel 4004" data-ar="معالج إنتل 4004">Intel 4004</p>
+          </div>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+          <div class="img-wrap">
+            <img src="img/2.jpg" class="card-img-bottom" alt="Intel 4004 microprocessor">
+            <div class="img-overlay" tabindex="0"
+                 data-en="Intel released the 4004, the world’s first commercial microprocessor."
+                 data-ar="أطلقت شركة Intel معالجها 4004، وهو أول معالج دقيق تجاري في العالم.">
+              Intel released the 4004, the world’s first commercial microprocessor.
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+      <!-- 1978 -->
+      <article class="col-12 col-sm-6 col-md-3">
+        <div class="card timeline-card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="fw-bold" data-en="1978" data-ar="1978">1978</h3>
+            <p data-en="8086 Processor" data-ar="معالج 8086">8086 Processor</p>
+          </div>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+          <div class="img-wrap">
+            <img src="img/3.jpg" class="card-img-bottom" alt="Intel 8086 processor">
+            <div class="img-overlay" tabindex="0"
+                 data-en="Launch of the 8086 processor, establishing x86 architecture."
+                 data-ar="إطلاق معالج 8086، الذي أسس بنية x86.">
+              Launch of the 8086 processor, establishing x86 architecture.
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+      <!-- 1985 -->
+      <article class="col-12 col-sm-6 col-md-3">
+        <div class="card timeline-card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="fw-bold" data-en="1985" data-ar="1985">1985</h3>
+            <p data-en="386 Processor" data-ar="معالج 386">386 Processor</p>
+          </div>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-    </div>
-  </section>
-
-  <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
-
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+          <div class="img-wrap">
+            <img src="img/4.jpg" class="card-img-bottom" alt="Intel 386 processor image">
+            <div class="img-overlay" tabindex="0"
+                 data-en="Intel introduced the 386, bringing 32-bit computing to personal computers."
+                 data-ar="قدمت إنتل معالج 386، مما أدخل الحوسبة 32-بت إلى الحواسيب الشخصية.">
+              Intel introduced the 386, bringing 32-bit computing to personal computers.
+            </div>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
 
-  <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+  <!-- THREE-COLUMN INFO -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+          <div class="info-card p-4 h-100">
+            <h4><span class="icon">💧</span> <span data-en="Water & Waste" data-ar="المياه والنفايات">Water & Waste</span></h4>
+            <p data-en="Intel conserves billions of gallons of water annually." data-ar="تحافظ إنتل على مليارات الجالونات من المياه سنوياً.">
+              Intel conserves billions of gallons of water annually.
+            </p>
+            <button class="btn btn-outline-intel" data-en="Learn More" data-ar="تعلم أكثر">Learn More</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card p-4 h-100">
+            <h4><span class="icon">🌍</span> <span data-en="Commitment" data-ar="الالتزام">Commitment</span></h4>
+            <p data-en="Intel pledged to reach net-zero emissions by 2040." data-ar="تعهدت إنتل بالوصول إلى صافي انبعاثات صفرية بحلول 2040.">
+              Intel pledged to reach net-zero emissions by 2040.
+            </p>
+            <button class="btn btn-outline-intel" data-en="Learn More" data-ar="تعلم أكثر">Learn More</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card p-4 h-100">
+            <h4><span class="icon">📊</span> <span data-en="RISE Strategy" data-ar="استراتيجية RISE">RISE Strategy</span></h4>
+            <p data-en="RISE outlines Intel's sustainability goals for 2030." data-ar="تحدد RISE أهداف الاستدامة لإنتل لعام 2030.">
+              RISE outlines Intel's sustainability goals for 2030.
+            </p>
+            <button class="btn btn-outline-intel" data-en="Learn More" data-ar="تعلم أكثر">Learn More</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
+
+  <!-- SUBSCRIPTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="card p-4 shadow-sm mx-auto" style="max-width:640px;">
+        <div class="row g-3 align-items-center">
+          <div class="col-md-4 text-center">
+            <h5 data-en="Subscribe to our sustainability newsletter" data-ar="اشترك في نشرتنا الإخبارية للاستدامة">Subscribe to our sustainability newsletter</h5>
+          </div>
+          <div class="col-md-5">
+            <label for="emailInput" class="visually-hidden" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+            <input id="emailInput" class="form-control" type="email" placeholder="you@example.com">
+          </div>
+          <div class="col-md-3 text-center">
+            <button id="subscribeBtn" class="btn btn-intel" data-en="Subscribe" data-ar="يشترك">Subscribe</button>
+          </div>
+        </div>
+        <div id="subscribeMessage" class="mt-3" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Intel Corporation</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Language + UI script (place before closing body) -->
+  <script>
+  // update footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function() {
+    const rtlLangs = ['ar','he','fa','ur'];
+    const bootstrapLink = document.getElementById('bootstrap-css');
+    const langBtn = document.getElementById('langToggleBtn');
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const subscribeMessage = document.getElementById('subscribeMessage');
+
+    // set initial language (en)
+    function applyLanguage(lang) {
+      const isRTL = rtlLangs.includes(lang);
+
+      // html attributes
+      document.documentElement.lang = lang;
+      document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+
+      // load correct bootstrap css
+      bootstrapLink.href = isRTL
+        ? 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css'
+        : 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+
+      // update all translatable elements
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = isRTL ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        // Prefer innerHTML so we can show icons or small markup if used.
+        if (text != null) el.innerHTML = text;
+      });
+
+      // update toggle button text and aria-pressed
+      langBtn.textContent = isRTL ? 'العربية' : 'English';
+      langBtn.setAttribute('aria-pressed', isRTL ? 'true' : 'false');
+
+      // update subscribe button label for accessibility
+      if (subscribeBtn) {
+        subscribeBtn.setAttribute('aria-label', isRTL ? subscribeBtn.getAttribute('data-ar') : subscribeBtn.getAttribute('data-en'));
+      }
+    }
+
+    // toggle language handler
+    window.toggleLanguage = function() {
+      const current = document.documentElement.lang || 'en';
+      applyLanguage(current === 'ar' ? 'en' : 'ar');
+    };
+
+    // wire toggle button
+    langBtn.addEventListener('click', toggleLanguage);
+
+    // image overlay accessibility: ensure focus shows overlay (CSS handles)
+    // subscribe button behavior (demo)
+    if (subscribeBtn) {
+      subscribeBtn.addEventListener('click', function() {
+        const email = document.getElementById('emailInput');
+        if (!email || !email.value || !email.value.includes('@')) {
+          subscribeMessage.innerHTML = '<div class="alert alert-danger" role="status">Please enter a valid email.</div>';
+          return;
+        }
+        subscribeMessage.innerHTML = '<div class="alert alert-success" role="status">Thank you — subscription successful!</div>';
+        email.value = '';
+      });
+    }
+
+    // initialize
+    applyLanguage('en');
+
+  })();
+  </script>
+
 </body>
 </html>
